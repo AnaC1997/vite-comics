@@ -6,30 +6,33 @@ export default{
         return{
             informazioni:[
                 {
-                    img: "src/assets/img/buy-comics-digital-comics.png",
+                    img: "buy-comics-digital-comics.png",
                     text: "DIGITAL COMICS",
                 },
                 {
-                    img: "src/assets/img/buy-comics-merchandise.png",
+                    img: "buy-comics-merchandise.png",
                     text: "DC MERCHANDISE",
                 },
                 {
-                    img: "src/assets/img/buy-comics-subscriptions.png",
+                    img: "buy-comics-subscriptions.png",
                     text: "SUSCRIPTION",
                 },
                 {
-                    img: "src/assets/img/buy-comics-shop-locator.png",
+                    img: "buy-comics-shop-locator.png",
                     text: "COMIC SHOP LOCATOR",
                 },
                 {
-                    img: "src/assets/img/buy-dc-power-visa.svg",
+                    img: "buy-dc-power-visa.svg",
                     text: "DC POWER VISA",
                 }
             ]
 
         }
     },
-    methods(){
+    methods: {
+        getImagePath: function (img){
+            return new URL (`../assets/${img}`, import.meta.url).href;
+        }
 
     },
     mounted(){
@@ -43,8 +46,8 @@ export default{
 
 <template>
     <section class="styleInfoMain">
-        <div class="card" v-for="info in informazioni">
-            <img :src="info.img" alt="#">
+        <div class="card" v-for="info in informazioni" :key="info.text">
+            <img :src="getImagePath(info.img)" alt="#">
             <p>{{ info.text }}</p>
         </div>
     </section>

@@ -86,11 +86,11 @@ export default {
             </span>
             <span class="icone">
                 <h4>FLOW US</h4>
-                 <img src="src/assets/img/footer-facebook.png" alt="#">
-                 <img src="src/assets/img/footer-periscope.png" alt="#">
-                 <img src="src/assets/img/footer-pinterest.png" alt="#">
-                 <img src="src/assets/img/footer-twitter.png" alt="#">
-                 <img src="src/assets/img/footer-youtube.png" alt="#">
+                 <img src="../assets/img/footer-facebook.png" alt="#">
+                 <img src="../assets/img/footer-periscope.png" alt="#">
+                 <img src="../assets/img/footer-pinterest.png" alt="#">
+                 <img src="../assets/img/footer-twitter.png" alt="#">
+                 <img src="../assets/img/footer-youtube.png" alt="#">
 
             </span>
           
@@ -144,10 +144,9 @@ ul li {
 }
 
 .imgDc{
-    width: 350px;
+    width: 500px;
     height: 350px;
-   
- 
+    object-fit: cover;
 }
 
 .pB1{
