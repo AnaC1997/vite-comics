@@ -1,10 +1,10 @@
 <script>
 
-export default{
+export default {
     name: "AppInfoMain",
-    data(){
-        return{
-            informazioni:[
+    data() {
+        return {
+            informazioni: [
                 {
                     img: "buy-comics-digital-comics.png",
                     text: "DIGITAL COMICS",
@@ -30,12 +30,12 @@ export default{
         }
     },
     methods: {
-        getImagePath: function (img){
-            return new URL (`../assets/${img}`, import.meta.url).href;
+        getImagePath: function (img) {
+            return new URL(`../assets/img/${img}`, import.meta.url).href;
         }
 
     },
-    mounted(){
+    mounted() {
         console.log("Componente AppInfoMain caricato")
 
     },
@@ -54,8 +54,7 @@ export default{
 </template>
 
 <style scoped>
-
-.styleInfoMain{
+.styleInfoMain {
     background-color: #0082F9;
     color: white;
     display: flex;
@@ -64,15 +63,14 @@ export default{
     padding: 3rem;
 }
 
-.card{
+.card {
     display: flex;
     gap: 0.5rem;
     align-items: center;
 }
 
-img{
+img {
     width: 60px;
     height: 60px;
 }
-
 </style>
